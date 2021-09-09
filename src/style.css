@@ -2,3 +2,57 @@
   padding: 0px;
   margin: 0px;
 }
+
+body {
+  /* background: #ee4266; */
+}
+.container {
+  border: 2px blue solid;
+  height: 100vh;
+  width: 50%;
+  margin: 0 auto;
+  /* background: #ee4266; */
+  /* color: white; */
+}
+
+.balance {
+  text-align: left;
+}
+
+.income-expense {
+  border: solid blue 2px;
+  display: flex;
+}
+
+.income {
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  border-right: grey 1px solid;
+}
+
+.number-income {
+  color: green;
+}
+
+.expense {
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+}
+
+.number-expense {
+  color: red;
+}
+
+.history {
+  border-bottom: 0.5px grey solid;
+  padding: 10px;
+}
+
+.new-transactions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
