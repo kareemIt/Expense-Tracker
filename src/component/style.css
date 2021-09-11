@@ -1,0 +1,23 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.individual-task {
+  border: 3px grey solid;
+}
+
+.remove-button {
+  background: none;
+  border: none;
+}
+
+.remove-button span {
+  display: inline-block;
+  transform: rotateZ(45deg);
+  font-size: 26px;
+}
+
+.remove-button :hover {
+  color: red;
+}

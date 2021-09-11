@@ -46,7 +46,7 @@ body {
 }
 
 .history {
-  border-bottom: 0.5px grey solid;
+  /* border-bottom: 0.5px grey solid; */
   padding: 10px;
 }
 
@@ -55,4 +55,8 @@ body {
   flex-direction: column;
   width: 100%;
   text-align: center;
+}
+
+.history-border {
+  border-bottom: 1px grey solid;
 }
