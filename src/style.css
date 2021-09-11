@@ -9,10 +9,9 @@ body {
 .container {
   border: 2px blue solid;
   height: 100vh;
-  width: 50%;
+  width: max-content;
   margin: 0 auto;
-  /* background: #ee4266; */
-  /* color: white; */
+  padding: 10px;
 }
 
 .balance {

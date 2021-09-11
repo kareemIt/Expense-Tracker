@@ -6,7 +6,7 @@ export default function App() {
   const [balance, setBalance] = useState(0);
   const [history, setHistory] = useState([]);
   const [task, setTask] = useState('');
-  const [amount, setAmount] = useState();
+  const [amount, setAmount] = useState('');
   const [income, setIncome] = useState(0);
   const [expense, setExpense] = useState(0);
 
@@ -20,11 +20,13 @@ export default function App() {
 
   function sumbitInfo() {
     setHistory(history.concat({ task, amount }));
-    if (amount > 0) {
-      setIncome(income + parseInt(amount));
+    const amountNum = Number(amount);
+    if (amountNum > 0) {
+      setIncome(income + amountNum);
     } else {
-      setExpense(expense + parseInt(amount));
+      setExpense(expense + amountNum);
     }
+    setBalance(balance + amountNum);
     setAmount('');
     setTask('');
   }

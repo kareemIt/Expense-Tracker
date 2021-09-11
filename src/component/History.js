@@ -5,11 +5,11 @@ const History = ({ listOfTasks }) => {
   return (
     <div className="inner-container">
       <div>
-        {listOfTasks.map((Task, index) => {
+        {listOfTasks.map((task, index) => {
           console.log(listOfTasks);
           return (
             <div className="individual-task" key={index}>
-              {Task.task} {Task.amount}
+              {task.task} {task.amount}
               <button className="remove-button">
                 <span>+</span>
               </button>
