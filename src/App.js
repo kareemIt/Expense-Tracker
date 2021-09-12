@@ -17,18 +17,31 @@ export default function App() {
   function handleUserAmount(e) {
     setAmount(e.target.value);
   }
+
   function onRemoveItem(index) {
     setHistory(history.filter((_history, i) => i != index));
+
+    if (_history > 0) {
+      setIncome(income - history.index);
+      setAmount(amount - history.index);
+    } else {
+      setExpense(expense - history.index);
+      setAmount(amount - history.index);
+    }
   }
 
   function sumbitInfo() {
+    if (task == '' || amount == '') return;
+
     setHistory(history.concat({ task, amount }));
     const amountNum = Number(amount);
+
     if (amountNum > 0) {
       setIncome(income + amountNum);
     } else {
       setExpense(expense + amountNum);
     }
+
     setBalance(balance + amountNum);
     setAmount('');
     setTask('');

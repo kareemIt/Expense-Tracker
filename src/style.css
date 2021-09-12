@@ -18,7 +18,6 @@
 }
 
 .income-expense {
-  /* border: solid blue 2px; */
   display: flex;
   border: grey 1px solid;
   margin: 7px;

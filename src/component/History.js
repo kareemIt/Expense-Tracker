@@ -6,7 +6,6 @@ const History = ({ listOfTasks, onRemoveItem }) => {
     <div className="inner-container">
       <div>
         {listOfTasks.map((task, index) => {
-          console.log(listOfTasks);
           return (
             <div className="individual-task" key={index}>
               {task.task} {task.amount}
