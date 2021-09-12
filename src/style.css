@@ -3,12 +3,10 @@
   margin: 0px;
 }
 
-body {
-  /* background: #ee4266; */
-}
 .container {
-  border: 2px blue solid;
+  /* border: 2px blue solid; */
   height: 100vh;
+  max-height: 550px;
   width: max-content;
   margin: 0 auto;
   padding: 10px;
@@ -16,11 +14,14 @@ body {
 
 .balance {
   text-align: left;
+  padding: 7px;
 }
 
 .income-expense {
-  border: solid blue 2px;
+  /* border: solid blue 2px; */
   display: flex;
+  border: grey 1px solid;
+  margin: 7px;
 }
 
 .income {
@@ -28,6 +29,7 @@ body {
   margin: 10px;
   width: 100%;
   border-right: grey 1px solid;
+  border: grey 1px solid;
 }
 
 .number-income {
@@ -38,6 +40,7 @@ body {
   padding: 10px;
   margin: 10px;
   width: 100%;
+  border: grey 1px solid;
 }
 
 .number-expense {
@@ -45,8 +48,13 @@ body {
 }
 
 .history {
-  /* border-bottom: 0.5px grey solid; */
-  padding: 10px;
+  border: 1px grey solid;
+  padding: 15px;
+  height: 50%;
+  width: 100%;
+  max-width: 500px;
+  overflow: auto;
+  font-size: 20px;
 }
 
 .new-transactions {
@@ -54,6 +62,7 @@ body {
   flex-direction: column;
   width: 100%;
   text-align: center;
+  padding: 10px;
 }
 
 .history-border {

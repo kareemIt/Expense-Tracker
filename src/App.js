@@ -17,6 +17,9 @@ export default function App() {
   function handleUserAmount(e) {
     setAmount(e.target.value);
   }
+  function onRemoveItem(index) {
+    setHistory(history.filter((_history, i) => i != index));
+  }
 
   function sumbitInfo() {
     setHistory(history.concat({ task, amount }));
@@ -51,7 +54,7 @@ export default function App() {
         </div>
         <div className="history">
           <p className="history-border">History</p>
-          <History listOfTasks={history} />
+          <History listOfTasks={history} onRemoveItem={onRemoveItem} />
         </div>
         <div className="new-transactions">
           <p>Add New Transaction</p>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 
-const History = ({ listOfTasks }) => {
+const History = ({ listOfTasks, onRemoveItem }) => {
   return (
     <div className="inner-container">
       <div>
@@ -10,7 +10,10 @@ const History = ({ listOfTasks }) => {
           return (
             <div className="individual-task" key={index}>
               {task.task} {task.amount}
-              <button className="remove-button">
+              <button
+                className="remove-button"
+                onClick={() => onRemoveItem(index)}
+              >
                 <span>+</span>
               </button>
             </div>
