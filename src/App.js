@@ -19,15 +19,17 @@ export default function App() {
   }
 
   function onRemoveItem(index) {
-    setHistory(history.filter((_history, i) => i != index));
+    const transaction = Number(history[index].amount);
 
-    if (_history > 0) {
-      setIncome(income - history.index);
-      setAmount(amount - history.index);
+    if (transaction > 0) {
+      setIncome(income - transaction);
+      setBalance(balance - transaction);
     } else {
-      setExpense(expense - history.index);
-      setAmount(amount - history.index);
+      setExpense(expense - transaction);
+      setBalance(balance - transaction);
     }
+
+    setHistory(history.filter((history, i) => i != index));
   }
 
   function sumbitInfo() {
