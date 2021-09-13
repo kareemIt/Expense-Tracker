@@ -19,15 +19,15 @@ export default function App() {
   }
 
   function onRemoveItem(index) {
-    const transaction = Number(history[index].amount);
+    const { amount } = history[index];
 
-    if (transaction > 0) {
-      setIncome(income - transaction);
-      setBalance(balance - transaction);
+    if (amount > 0) {
+      setIncome(income - amount);
     } else {
-      setExpense(expense - transaction);
-      setBalance(balance - transaction);
+      setExpense(expense - amount);
     }
+
+    setBalance(balance - amount);
 
     setHistory(history.filter((history, i) => i != index));
   }
@@ -35,8 +35,8 @@ export default function App() {
   function sumbitInfo() {
     if (task == '' || amount == '') return;
 
-    setHistory(history.concat({ task, amount }));
     const amountNum = Number(amount);
+    setHistory(history.concat({ task, amount: amountNum }));
 
     if (amountNum > 0) {
       setIncome(income + amountNum);
@@ -52,7 +52,7 @@ export default function App() {
   return (
     <div>
       <div className="container">
-        <h1>Expensive Tracker</h1>
+        <h1>Expense Tracker</h1>
         <div className="balance">
           <p>Your Balance</p>
           <p>${balance.toFixed(2)}</p>
@@ -68,8 +68,8 @@ export default function App() {
           </div>
         </div>
         <div className="history">
-          <p className="history-border">History</p>
-          <History listOfTasks={history} onRemoveItem={onRemoveItem} />
+          <p className="history-header">History</p>
+          <History transactions={history} onRemoveItem={onRemoveItem} />
         </div>
         <div className="new-transactions">
           <p>Add New Transaction</p>

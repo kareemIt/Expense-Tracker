@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import './style.css';
 
-const History = ({ listOfTasks, onRemoveItem }) => {
+const History = ({ transactions, onRemoveItem }) => {
   return (
     <div className="inner-container">
       <div>
-        {listOfTasks.map((task, index) => {
-          return (
-            <div className="individual-task" key={index}>
-              {task.task} {task.amount}
-              <button
-                className="remove-button"
-                onClick={() => onRemoveItem(index)}
-              >
-                <span>+</span>
-              </button>
-            </div>
-          );
-        })}
+        {transactions.map((transaction, index) => (
+          <div
+            className={transaction.amount > 0 ? 'postive' : 'negative'}
+            key={index}
+          >
+            {transaction.task} {transaction.amount}
+            <button
+              className="remove-button"
+              onClick={() => onRemoveItem(index)}
+            >
+              <span>+</span>
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );

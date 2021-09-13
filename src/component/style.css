@@ -3,10 +3,6 @@
   padding: 0px;
 }
 
-.individual-task {
-  border: 3px grey solid;
-}
-
 .remove-button {
   background: none;
   border: none;
@@ -20,4 +16,16 @@
 
 .remove-button :hover {
   color: red;
+}
+
+.postive {
+  display: flex;
+  justify-content: space-between;
+  background-color: #90ee90;
+}
+
+.negative {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ff7f7f;
 }
