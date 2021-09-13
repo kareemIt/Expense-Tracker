@@ -49,6 +49,11 @@ export default function App() {
     setTask('');
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    sumbitInfo();
+  }
+
   return (
     <div>
       <div className="container">
@@ -74,19 +79,23 @@ export default function App() {
         <div className="new-transactions">
           <p>Add New Transaction</p>
           <p>Text</p>
-          <input
-            value={task}
-            placeHolder="Enter text"
-            type="text"
-            onChange={handleUserTask}
-          />
+          <form onSubmit={handleSubmit}>
+            <input
+              value={task}
+              placeHolder="Enter text"
+              type="text"
+              onChange={handleUserTask}
+            />
+          </form>
           <p>Amount</p>
-          <input
-            value={amount}
-            placeHolder="Enter amount"
-            type="number"
-            onChange={handleUserAmount}
-          />
+          <form onSubmit={handleSubmit}>
+            <input
+              value={amount}
+              placeHolder="Enter amount"
+              type="number"
+              onChange={handleUserAmount}
+            />
+          </form>
           <button onClick={sumbitInfo}>Add transaction</button>
         </div>
       </div>

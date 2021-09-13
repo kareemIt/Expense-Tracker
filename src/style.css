@@ -68,3 +68,7 @@
 .history-header {
   border-bottom: 1px grey solid;
 }
+
+input {
+  width: 100%;
+}
