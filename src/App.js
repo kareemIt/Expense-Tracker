@@ -82,7 +82,7 @@ export default function App() {
           <form onSubmit={handleSubmit}>
             <input
               value={task}
-              placeHolder="Enter text"
+              placeholder="Enter text"
               type="text"
               onChange={handleUserTask}
             />
@@ -91,7 +91,7 @@ export default function App() {
           <form onSubmit={handleSubmit}>
             <input
               value={amount}
-              placeHolder="Enter amount"
+              placeholder="Enter amount"
               type="number"
               onChange={handleUserAmount}
             />
